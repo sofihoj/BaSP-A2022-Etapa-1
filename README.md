@@ -7,9 +7,9 @@
 
   2- open the file "index.html" on your browser
  ```
+### Week 00
+Making the layout in Figma of different sections of the website by groups of two people.
 ### Week 01
-Making the layout in Figma of different sections of the app by groups of two people.
-### Week 02
 Adapting the desing of the landing page made by other partners to an html document
 
 
