@@ -1,4 +1,95 @@
-* {
+*, header, .sidebar {
     font-family: 'Roboto', sans-serif;
-    margin: 0;
+}
+
+body {
+    color: #373867;
+}
+
+a {
+    text-decoration: none;
+    color: #373867;
+}
+
+.sidebar {
+    width: 15%;
+    height: 100%;
+    float: left;
+    background-color: #AACE9B;
+    position: fixed;
+    padding: 1em;
+}
+
+.sidebar h2 {
+    text-decoration: underline;
+    text-decoration-color: #F33413;
+}
+
+.content {
+    width: 80%;
+    float: right;
+    padding: 1em;
+}
+
+/* .top-header p {
+    float: left;
+} */
+
+.top-header li {
+    display: inline;
+    /* float: right; */
+}
+
+header .top-header {
+    border-bottom: 2px #F33413 solid;
+}
+
+.main-header {
+    display: flex; /*Si no le pongo flex no me separa la seccion de abajo*/
+}/*Consultar*/
+
+.main-header div {
+    float: left;
+    width: 75%;
+}
+.main-header img {
+    float: right;
+    width: 25%;
+}
+
+.main-header button {
+    padding: 10px 35px;
+    color: #F13312;
+    background-color: #FFF;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 1px solid #F13312;
+    border-radius: 5px;
+}
+
+.main-header button:hover {
+    background-color: #F13312;
+    color: #373867;
+}
+
+.list {
+    width: 25%;
+    float: left;
+    padding: 35px;
+    border-top: 2px #373867 solid;
+    border-bottom: 2px #373867 solid;
+}
+
+.list h4 {
+    text-align: center;
+}
+
+footer {
+    width: 80%;
+    float: right;
+    text-align: center;
+}
+
+footer li {
+    display: inline;
 }
