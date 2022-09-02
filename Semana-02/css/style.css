@@ -1,4 +1,4 @@
-*, header, .sidebar {
+*, header, .sidebar, footer {
     font-family: 'Roboto', sans-serif;
 }
 
@@ -20,7 +20,7 @@ a {
     padding: 1em;
 }
 
-.sidebar h1, h2  {
+.sidebar h1, .sidebar h2  {
     font-size: 22px;
     font-weight: 700;
     text-decoration: underline;
@@ -70,9 +70,17 @@ a {
     padding: 1em;
 }
 
-/* .top-header p {
-    float: left;
-} */
+.content h2 {
+    font-weight: 700;
+    font-size: 25px;
+    padding: 30px 0;
+    text-decoration: underline;
+    text-decoration-color: #F33413;
+}
+
+.top-header p {
+    display: inline-block;
+}
 
 .top-header li {
     display: inline-block;
@@ -122,10 +130,7 @@ header .top-header {
     border-bottom: 2px #373867 solid;
 }
 
-.reasons h2 {
-    text-decoration: underline;
-    text-decoration-color: #F33413;
-}
+
 .uses {
     display: inline-block;
 }
@@ -148,10 +153,6 @@ header .top-header {
     display: inline-block;
 }
 
-.features h2 {
-    text-decoration: underline;
-    text-decoration-color: #F33413;
-}
 
 .features article {
     width: 22%;
@@ -161,6 +162,18 @@ header .top-header {
 
 .features img {
     width: 100%;
+}
+
+.features h3 {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.features p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: justify;
 }
 
 .features button {
@@ -188,6 +201,12 @@ header .top-header {
 
 .list h4 {
     text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.list li {
+    font-size: 14px;
 }
 
 footer {
@@ -198,4 +217,9 @@ footer {
 
 footer li {
     display: inline;
+}
+
+footer p {
+    margin: 15px;
+    font-size: 14px;
 }
