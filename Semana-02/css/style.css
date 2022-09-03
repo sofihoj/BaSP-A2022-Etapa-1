@@ -93,11 +93,22 @@ header .top-header {
 
 .main-header {
     display: flex; /*Si no le pongo flex no me separa la seccion de abajo*/
+    margin: 20px 0;
 }/*Consultar*/
 
 .main-header h1 {
     font-size: 35px;
     font-weight: 700
+}
+
+.main-header h3 {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.main-header p {
+    font-size: 14px;
+    margin-top: 20px;
 }
 
 .main-header div {
@@ -107,6 +118,7 @@ header .top-header {
 .main-header img {
     float: right;
     width: 25%;
+    margin-left: 70px;
 }
 
 .main-header button {
@@ -117,6 +129,7 @@ header .top-header {
     font-weight: 700;
     border: 1px solid #F13312;
     border-radius: 5px;
+    margin-top: 20px;
 }
 
 .main-header button:hover {
@@ -133,7 +146,9 @@ header .top-header {
 
 .uses {
     display: inline-block;
+    margin-bottom: 20px;
 }
+
 .uses article {
     float: left;
     width: 36%;
@@ -149,10 +164,13 @@ header .top-header {
     float: right;
 }
 
+.uses p {
+    text-align: justify;
+}
+
 .features {
     display: inline-block;
 }
-
 
 .features article {
     width: 22%;
@@ -191,6 +209,35 @@ header .top-header {
     color: #373867;
 }
 
+form {
+    /* position: relative; */
+    font-size: 14px;
+}
+
+.form-input label {
+    display: block;
+    margin: 10px 0;
+}
+
+.form-input input {
+    width: 535px;
+    height: 30px;
+    border: 1px solid #373867;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.form-inputs {
+    float:left;
+    width: 60%;
+}
+
+.radio-buttons {
+    float: right;
+    width: 40%;
+    display: block;
+}
+
 .list {
     width: 25%;
     float: left;
@@ -207,6 +254,15 @@ header .top-header {
 
 .list li {
     font-size: 14px;
+}
+
+.history {
+    font-size: 14px;
+}
+
+.history h3 {
+    font-weight: bold;
+    margin: 15px 0;
 }
 
 footer {

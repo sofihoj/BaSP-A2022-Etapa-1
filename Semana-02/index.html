@@ -145,32 +145,36 @@
                 <section class="form-info">
                     <h2>Get some info</h2>
                     <form>
-                        <div class="form-group">
-                            <label for="full-name">Full name:</label>
-                            <input type="text" name="full-name" placeholder="Full name">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" name="email" placeholder="Email">
-                        </div>
-                        <div class="radio-buttons">
-                            <p>Contact area:</p>
-                            <div>
-                                <input type="radio" id="human-resources" name="contact_area" value="Human resources">
-                                <label for="human-resources">Human resources</label>
+                        <div class="form-div">
+                            <div class="form-inputs">
+                                <div class="form-input">
+                                    <label for="full-name">Full name:</label>
+                                    <input type="text" name="full-name" placeholder="Full name">
+                                </div>
+                                <div class="form-input">
+                                    <label for="email">Email:</label>
+                                    <input type="email" name="email" placeholder="Email">
+                                </div>
                             </div>
-                            <div>
-                                <input type="radio" id="systems" name="contact_area" value="Systems">
-                                <label for="systems">Systems</label>
+                            <div class="radio-buttons">
+                                <p>Contact area:</p>
+                                <div>
+                                    <input type="radio" id="human-resources" name="contact_area" value="Human resources">
+                                    <label for="human-resources">Human resources</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="systems" name="contact_area" value="Systems">
+                                    <label for="systems">Systems</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="marketing" name="contact_area" value="Marketing">
+                                    <label for="marketing">Marketing</label>
+                                </div>                       
                             </div>
-                            <div>
-                                <input type="radio" id="marketing" name="contact_area" value="Marketing">
-                                <label for="marketing">Marketing</label>
-                            </div>                       
                         </div>
                         <div class="message">
                             <p>Message:</p>
-                            <textarea name="message" rows="10" cols="30" placeholder="Message"></textarea>
+                            <textarea name="message" rows="10" cols="50" placeholder="Message"></textarea>
                         </div>
                         <div>
                             <button id="reset">Reset</button>
