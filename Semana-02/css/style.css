@@ -36,6 +36,10 @@ a {
     border-bottom: 1px solid #373867;
 }
 
+.sidebar nav a:hover{
+    color: #FF3E1D;
+}
+
 .sidebar h2 {
     margin-top: 40px;
     margin-bottom: 10px;
@@ -54,8 +58,7 @@ a {
 
 .sidebar .info li {
     font-size: 13px;
-    margin: 20px;
-    margin-left: 0px;
+    margin: 20px 0;
     padding-bottom: 7px;
     border-bottom: 1px solid #373867;
 }
@@ -197,7 +200,7 @@ a {
 }
 
 .features article {
-    width: 22%;
+    width: 23%;
     float: left;
     margin: 0 10px;
 }
