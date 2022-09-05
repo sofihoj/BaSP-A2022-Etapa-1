@@ -166,16 +166,13 @@ a {
 }
 
 .uses article {
-    float: left;
-    width: 487px;
+    width: 45%;
     height: 107px;
     margin: 15px;
-    /*
-    width: 34%;
     display: inline-block;
     position: relative
-    */
 }
+
 .uses img {
     width: 20%;
     float: left;
@@ -208,10 +205,6 @@ a {
     width: 23%;
     float: left;
     margin: 0 10px;
-    /*
-    display: inline-block;
-    width: 16%;
-    */
 }
 
 .features img {
@@ -252,7 +245,6 @@ a {
 }
 
 form {
-    /* position: relative; */
     font-size: 14px;
 }
 
@@ -276,7 +268,7 @@ form {
 
 .radio-buttons {
     float: right;
-    width: 40%;/*45%*/
+    width: 40%;
     display: block;
     margin-top: 30px;
 }
@@ -293,7 +285,7 @@ form {
 
 .message textarea {
     resize: none;
-    width: 947px;/*800px*/
+    width: 947px;
     height: 100px;
     border: 1px solid #373867;
     border-radius: 5px;
@@ -356,9 +348,9 @@ form button {
 }
 
 .list {
-    width: 16.5%;/*15*/
+    width: 16.5%;
     float: left;
-    padding: 35px 90px; /*35px 50px*/
+    padding: 35px 90px;
     border-top: 2px #373867 solid;
     border-bottom: 2px #373867 solid;
     font-size: 14px;
