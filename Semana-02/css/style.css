@@ -368,11 +368,25 @@ footer {
     text-align: center;
 }
 
+footer ul {
+    position: relative;
+    font-size: 25px;
+}
+
 footer li {
-    display: inline;
+    display: inline-block;
+}
+
+footer i, .top-header a {
+    color: #5D5D5D;
 }
 
 footer p {
     margin: 15px;
     font-size: 14px;
 }
+
+
+
+
+
