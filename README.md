@@ -7,12 +7,14 @@
 
   2- open the file "index.html" on your browser
  ```
-### Week 00
+### Week 00: FIGMA
 Making the layout in Figma of different sections of the website by groups of two people.
-### Week 01
+### Week 01: HTML
 Adapting the desing of the landing page made by other partners to an html document
-### Week 02
+### Week 02: CSS
 Include CSS styles to the HTML structure so it can look just like the landing page layout from Figma.
+### Week 03: FLEXBOX
+Adapt the style to make the landing page responsive.
 
 
 _By Sofía Hojberg_
