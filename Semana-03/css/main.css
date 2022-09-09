@@ -109,6 +109,7 @@ form {
     flex-direction: column;
     justify-content: start;
 }
+
 .form-input label {
     margin: 10px 0;
     font-weight: bold;
@@ -170,6 +171,26 @@ form button {
 
 #send:hover {
     background-color: #4EB125;
+}
+
+.history {
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+.history-articles {
+    display: flex;
+    flex-direction: column;
+}
+
+.history-articles h3 {
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.history p {
+    text-align: justify;
+    line-height: 16px;
 }
 
 .lists {
