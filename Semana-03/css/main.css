@@ -36,5 +36,60 @@
 
 .uses p {
     text-align: justify;
-    padding-right: 15px;
+    /* padding-right: 5px; */
+}
+
+.features {
+    padding-bottom: 30px;
+}
+
+.articles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow-x: auto;
+}
+
+.articles::-webkit-scrollbar {
+    width: 0;
+}
+
+.features article {
+    min-width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin: 0 20px;
+}
+
+.features article:first-child {
+    margin-left: 5px;
+}
+
+.features h3 {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.features p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.features button {
+    padding: 10px 25px;
+    color: #F13312;
+    background-color: #FFF;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 1px solid #F13312;
+    border-radius: 5px;
+    width: 35%;
+}
+
+.features button:hover {
+    background-color: #F13312;
+    color: #373867;
 }
