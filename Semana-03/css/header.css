@@ -80,3 +80,18 @@ header {
     background-color: #F13312;
     color: #373867;
 }
+
+@media (min-width: 1024px) {
+    .main-header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .main-header div {
+        width: 75%;
+    }
+
+    .main-header img {
+        width: 25%;
+    }
+}

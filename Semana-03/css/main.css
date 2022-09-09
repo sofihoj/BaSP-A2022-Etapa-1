@@ -202,7 +202,6 @@ form button {
 
 .list {
     padding: 35px 90px;
-    
     font-size: 14px;
 }
 
@@ -210,4 +209,74 @@ form button {
     text-align: center;
     font-weight: 700;
     margin-bottom: 15px;
+}
+
+@media (min-width: 1024px) {
+    .reasons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .uses article {
+        width: 47%;
+    }
+
+    .uses img {
+        margin-right: 10px;
+    }
+
+    .features {
+        display: inline-block;
+    }
+
+    .articles {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        overflow-x: hidden;
+    }
+
+    .features article {
+        min-width: 23%;
+        margin: 0 10px;
+    }
+
+    .form-div {
+    display: flex;
+    justify-content: space-between;
+    } 
+
+    .form-inputs {
+    width: 75%;
+    }
+
+    .form-input input {
+        width: 75%;
+    }
+
+    .radio-buttons {
+        width: 40%;
+        margin-top: 30px;   
+    }
+
+    .image-left {
+        position: relative;
+        float: left; 
+        padding: 0 20px 10px 0;
+    }
+    
+    .image-right {
+        position: relative;
+        float: right; 
+        padding: 20px 0 0 20px;
+    }
+
+    .lists {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .list {
+        width: 16.5%;
+    }
 }
