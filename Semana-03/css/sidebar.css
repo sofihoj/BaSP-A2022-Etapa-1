@@ -12,8 +12,8 @@
         padding: 1em;
         /* position: fixed; */
     }
-    
-    .sidebar h1, .sidebar h2  {
+
+    #menu {
         font-size: 22px;
         font-weight: 700;
         text-decoration: underline;
@@ -33,15 +33,20 @@
         color: #FF3E1D;
     }
     
-    .sidebar h2 {
+    .sidebar .info {
+        margin-right: 20px;
+    }
+    
+    #contact {
+        font-size: 22px;
+        font-weight: 700;
+        text-decoration: underline;
+        text-decoration-color: #F33413;        
         margin-top: 40px;
         margin-bottom: 10px;
         padding-top: 40px;
+        padding-bottom: 15px;
         border-top: 1px solid #373867;
-    }
-    
-    .sidebar .info {
-        margin-right: 20px;
     }
     
     .sidebar .info p {

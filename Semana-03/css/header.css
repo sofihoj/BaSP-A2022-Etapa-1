@@ -49,16 +49,19 @@ header {
     font-weight: 700;
 }
 
+.main-header span {
+    display: block;
+}
+
 .main-header h3 {
     font-size: 20px;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .main-header p {
     font-size: 14px;
-    margin-top: 20px;
+    margin-top: 30px;
     align-self: center;
-    
 }
 
 .main-header img {
@@ -73,7 +76,7 @@ header {
     font-weight: 700;
     border: 1px solid #F13312;
     border-radius: 5px;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .main-header button:hover {
