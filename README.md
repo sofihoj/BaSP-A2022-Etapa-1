@@ -14,7 +14,7 @@ Adapting the desing of the landing page made by other partners to an html docume
 ### Week 02: CSS
 Include CSS styles to the HTML structure so it can look just like the landing page layout from Figma.
 ### Week 03: FLEXBOX
-Adapt the style to make the landing page responsive.
+Adapt the style to make the landing page responsive applying the Mobile-first concept.
 
 
 _By Sofía Hojberg_
