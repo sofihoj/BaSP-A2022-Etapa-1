@@ -93,3 +93,81 @@
     background-color: #F13312;
     color: #373867;
 }
+
+.form-info {
+    border-bottom: 2px #373867 solid;
+    border-top: 2px #373867 solid;
+    padding-bottom: 30px;
+}
+
+form {
+    font-size: 14px;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.form-input label {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.form-input input {
+    height: 30px;
+    border: 1px solid #373867;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.radio-buttons {
+    margin: 20px 0;
+    
+}
+
+.radio-buttons p {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+}
+
+.message p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.message textarea {
+    resize: none;
+    width: 85%;
+    height: 90% ;
+    border: 1px solid #373867;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+form button {
+    border: 1px solid #373867;
+    border-radius: 5px;
+    color:#373867;
+    padding: 7px 25px;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+#reset {
+    background-color: #F13312;
+}
+
+#send {
+    background-color: #AACE9B;
+    width: 110px;
+}
+
+#send:hover {
+    background-color: #4EB125;
+}
