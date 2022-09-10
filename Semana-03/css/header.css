@@ -3,6 +3,11 @@ header {
     flex-direction: column;
 }
 
+#burguer-menu {
+    color: #F33413;
+    margin-right: 10px;
+}
+
 .top-header {
     display: flex;  
     justify-content: space-between;
@@ -10,6 +15,12 @@ header {
     border-bottom: 2px #F33413 solid;
     padding-bottom: 10px;
 }
+
+.top-header div {
+    display: flex;
+    align-items: center;
+}
+
 
 .top-header p {
     font-size: 14px;
