@@ -32,4 +32,13 @@ a {
         width: 80%;
         padding-left: 2em;
     }
+
+    body::-webkit-scrollbar {
+        width: 0.4em;
+    }
+    
+    body::-webkit-scrollbar-thumb {
+        background: #373867;
+        border-radius: 5px;
+    }
 }
