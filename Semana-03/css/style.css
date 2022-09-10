@@ -30,5 +30,6 @@ a {
 
     .content {
         width: 80%;
+        padding-left: 2em;
     }
 }
