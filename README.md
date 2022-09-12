@@ -10,12 +10,14 @@
  ```
 ### **Week 00: FIGMA**
 Making the layout in [Figma](https://www.figma.com/proto/m90Zv0Q9fTqU4m0HPQ25AK/UI-kit-RR-(BaSP)---grupo-a?node-id=1166%3A8849&scaling=scale-down&page-id=41%3A5&starting-point-node-id=1166%3A8849&show-proto-sidebar=1) of different sections of the website by groups of two people.
+
+I worked along with Juan Andrés Cappuccio on the landing mobile layout.
 <br>
 - Languages / tools used:
 <br>[![My Skills](https://skills.thijs.gg/icons?i=figma)](https://skills.thijs.gg)
 
 ### **Week 01: HTML**
-Adapting the desing of the landing page made by other partners to an html document
+Adapting the desing of the desktop landing page made by other partners to an html document.
 <br>
 - Languages / tools used:
 <br>[![My Skills](https://skills.thijs.gg/icons?i=html)](https://skills.thijs.gg)
