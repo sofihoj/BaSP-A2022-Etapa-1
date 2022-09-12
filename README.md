@@ -15,6 +15,7 @@ Adapting the desing of the landing page made by other partners to an html docume
 Include CSS styles to the HTML structure so it can look just like the landing page layout from Figma.
 ### Week 03: FLEXBOX
 Adapt the style to make the landing page responsive applying the Mobile-first concept.
+- Github pages: https://sofihoj.github.io/BaSP-A2022-Etapa-1/Semana-03/index.html
 
 
 _By Sofía Hojberg_
