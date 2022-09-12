@@ -18,7 +18,7 @@ Making the layout in [Figma](https://www.figma.com/proto/m90Zv0Q9fTqU4m0HPQ25AK/
 Adapting the desing of the landing page made by other partners to an html document
 <br>
 - Languages / tools used:
-<br>[![My Skills](https://skills.thijs.gg/icons?i=figma)](https://skills.thijs.gg)
+<br>[![My Skills](https://skills.thijs.gg/icons?i=html)](https://skills.thijs.gg)
 
 ### Week 02: CSS
 Include CSS styles to the HTML structure so it can look just like the landing page layout from Figma.
@@ -26,7 +26,7 @@ Include CSS styles to the HTML structure so it can look just like the landing pa
 - Languages / tools used:
 <br>[![My Skills](https://skills.thijs.gg/icons?i=html,css)](https://skills.thijs.gg)
 ### Week 03: FLEXBOX
-Adapt the style to make the landing page responsive applying the Mobile-first concept.
+Adapt the style to make the landing page responsive using flexbox applying the Mobile-first concept.
 <br>
 - Languages / tools used:
 <br>[![My Skills](https://skills.thijs.gg/icons?i=html,css)](https://skills.thijs.gg)
