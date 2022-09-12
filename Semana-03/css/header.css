@@ -95,7 +95,7 @@ header {
     color: #373867;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     .main-header {
         flex-direction: row;
         justify-content: space-between;
@@ -105,7 +105,12 @@ header {
         width: 75%;
     }
 
+    .main-header p {
+        margin-right: 70px;
+    }
+
     .main-header img {
         width: 25%;
     }
 }
+

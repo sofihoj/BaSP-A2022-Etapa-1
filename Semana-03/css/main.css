@@ -97,6 +97,9 @@ form button {
     border: 1px solid #F13312;
     border-radius: 5px;
     width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .features button:hover {
