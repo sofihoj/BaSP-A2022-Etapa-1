@@ -75,7 +75,8 @@ header {
 }
 
 .main-header img {
-    max-width: 80%;
+    max-width: 100%;
+    margin-top: 10px;
 }
 
 .main-header button {
