@@ -1,7 +1,7 @@
 .sidebar { 
     display: none;
     background-color: #AACE9B;
-    padding: 1em;
+    padding: 1.5em;
 }
 
 .sidebar #menu {
@@ -14,18 +14,13 @@
 
 .sidebar nav li {
     font-size: 15px;
-    margin: 20px;
-    margin-left: 0px;
+    margin: 20px 0;
     padding-bottom: 7px;
     border-bottom: 1px solid #373867;
 }
 
 .sidebar nav a:hover{
     color: #FF3E1D;
-}
-
-.sidebar .info {
-    margin-right: 20px;
 }
 
 .sidebar #contact {
