@@ -43,6 +43,6 @@ _By Sofía Hojberg_
   <i>Let's connect!</i>
 </p>
   <p>
-    <a href="https://www.linkedin.com/in/sofía-hojberg/" alt="Linkedin"><img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" width="35px"</a>
+    <a href="https://www.linkedin.com/in/sofía-hojberg/" alt="Linkedin"><img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" width="35px"></a>
     <a href="mailto:sofiahojberg@gmail.com" alt="Send me an email"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" width="35px"></a>
  </p>
