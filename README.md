@@ -35,6 +35,13 @@ Adapt the style to make the landing page responsive using flexbox applying the M
 <br>[![My Skills](https://skills.thijs.gg/icons?i=html,css)](https://skills.thijs.gg)
 - Github pages: [Semana-03](https://sofihoj.github.io/BaSP-A2022-Etapa-1/Semana-03/index.html)
 
+### **Week 04: JAVASCRIPT**
+After making the corrections according to the feedback recieved of the Week-03 work, this week's objective consist on solve some JavaScript exercises including: variables and operators, strings, arrays, control structures and functions.
+<br>
+- Languages / tools used:
+<br>[![My Skills](https://skills.thijs.gg/icons?i=html,css,js)](https://skills.thijs.gg)
+- Github pages: [Semana-04](https://sofihoj.github.io/BaSP-A2022-Etapa-1/Semana-04/index.html)
+
 
 <hr />
 
