@@ -20,7 +20,7 @@ console.log('- Exercise 4.b:');
 “Adulto mayor” entre 61 y 75 años;
 “Anciano” si es mayor a 75 años.
 */
-var age = 22;
+var age = Math.round(Math.random() * 100);
 if (age < 2) {
     alert('Bebé')
 } else if (2 <= age && age <= 12) {
