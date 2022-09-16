@@ -253,19 +253,19 @@ form button {
     .form-div {
         display: flex;
         justify-content: space-between;
-    } 
-    
+    }
+
     .form-inputs {
         width: 75%;
     }
-    
+
     .form-input input {
         width: 75%;
     }
-    
+
     .radio-buttons {
         width: 40%;
-        margin-top: 30px;   
+        margin-top: 30px;
     }
 
     .message textarea {
