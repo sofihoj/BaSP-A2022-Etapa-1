@@ -16,7 +16,7 @@ h1 {
     font-size: 36px;
     line-height: 44px;
     text-align: center;
-    width: 750px;
+    width: 70%;
     height: auto;
     padding: 30px 10px;
     text-transform: uppercase;
@@ -28,4 +28,10 @@ h2 {
     font-size: 28px;
     text-align: center;
     color: #000000;
+}
+
+@media (max-width: 480px){
+    h1 {
+        font-size: 24px;
+    }
 }
