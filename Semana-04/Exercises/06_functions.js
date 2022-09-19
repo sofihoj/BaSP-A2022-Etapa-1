@@ -34,9 +34,12 @@ function validate(num){
     return Number.isInteger(num);
 };
 
-console.log('This is an integer: ' + validate(5));
-console.log('This is an integer: ' + validate(5.5));
-console.log('This is an integer: ' + validate('m'));
+var try1 = 5;
+var try2 = 5.5;
+var try3 = 'm';
+console.log(try1 + ' is an integer: ' + validate(try1));
+console.log(try2 + ' is an integer: ' + validate(try2));
+console.log(try3 + ' is an integer: ' + validate(try3));
 
 
 console.log('- Exercise 6.d:');
