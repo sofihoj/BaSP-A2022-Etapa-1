@@ -39,6 +39,9 @@ Utilizar los métodos de los ejercicios anteriores para generar un nuevo string 
 palabras en mayúscula y las demás letras en minúscula (utilizar indexOf, substring, toUpperCase, toLowerCase y el operador +).*/
 var longStr = "thisIsALongString thisIsAnotherLongString";
 var blankSpace = longStr.indexOf(' ');
-var newLongStr = (longStr.substring(0, 1)).toUpperCase() + (longStr.substring(1, blankSpace)).toLowerCase() + " " + (longStr.substring(blankSpace+1, blankSpace+2)).toUpperCase() + (longStr.substring(blankSpace+2, longStr.length)).toLowerCase();
+var newLongStr = (longStr.substring(0, 1)).toUpperCase() + 
+(longStr.substring(1, blankSpace)).toLowerCase() + " " + 
+(longStr.substring(blankSpace+1, blankSpace+2)).toUpperCase() + 
+(longStr.substring(blankSpace+2, longStr.length)).toLowerCase();
 console.log('First letter of both strings capitalized: ' + newLongStr);
 
