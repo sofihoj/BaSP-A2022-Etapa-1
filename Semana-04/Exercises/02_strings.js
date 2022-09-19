@@ -31,7 +31,7 @@ console.log('- Exercise 2.e:');
 primer espacio en blanco y guardarla en una variable (utilizar indexOf).*/
 var otherStr = "Sofi Hojberg";
 var space = otherStr.indexOf(" ");
-console.log('Blank space is at position: ' + space);
+console.log('Blank space of -' + otherStr + '- is at position: ' + space);
 
 console.log('- Exercise 2.f:');
 /*Crear una variable de tipo string con al menos 2 palabras largas (10 caracteres y algún espacio entre medio). 
