@@ -7,6 +7,8 @@ var myArray = ['word1', 'word2', 'word3', 'word4', 'word5'];
 for (var contador = 0; contador < 5; contador++){
     alert(myArray[contador]);
 };
+
+//--> Simpler way: using for .. of
 // for (let i of myArray) {
 //     alert(i);
 // };
