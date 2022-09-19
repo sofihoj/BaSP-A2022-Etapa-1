@@ -65,6 +65,11 @@ form button {
     overflow-x: auto;
 }
 
+/*Hide the scroll bar in mobile and tablet layout*/
+.articles::-webkit-scrollbar {
+    width: 0px;
+}
+
 .features article {
     max-width: 80%;
     display: flex;
@@ -184,27 +189,12 @@ form button {
     margin: 0 0 2em 0;
 }
 
-.image-left, .image-right {
-    top: 0.25em;
-    max-width: 35%;
-}
-
-.image-left {
-    float: left;
-    padding: 0 1.5em 1em 0;
-}
-
-.image-right {
-    float: right;
-    padding: 0 0 1em 1.5em;
-}
-
 .image-left img, .image-right img {
     width: 100%;
 }
 
 .history img {
-    display: block;
+    margin-bottom: 10px;
 }
 
 .lists {
@@ -270,6 +260,25 @@ form button {
 
     .message textarea {
         width: 85%;
+    }
+
+    .image-left, .image-right {
+        top: 0.25em;
+        max-width: 35%;
+    }
+
+    .image-left {
+        float: left;
+        padding: 0 1.5em 1em 0;
+    }
+
+    .image-right {
+        float: right;
+        padding: 0 0 1em 1.5em;
+    }
+
+    .history img {
+        margin-bottom: 0;
     }
 }
 

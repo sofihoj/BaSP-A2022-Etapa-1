@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-   
+
 body {
     font-family: 'Roboto', sans-serif;
     color: #373867;
@@ -20,7 +20,7 @@ a {
     font-size: 25px;
     padding: 30px 0;
     text-decoration: underline;
-    text-decoration-color: #F33413; 
+    text-decoration-color: #F33413;
 }
 
 @media (min-width: 1024px) {
@@ -36,7 +36,7 @@ a {
     body::-webkit-scrollbar {
         width: 0.4em;
     }
-    
+
     body::-webkit-scrollbar-thumb {
         background: #373867;
         border-radius: 5px;
