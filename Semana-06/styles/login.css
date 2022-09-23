@@ -4,12 +4,6 @@ main {
     align-items: center;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
 main p {
     margin-top: 25px;
     font-size: 14px;
@@ -18,6 +12,17 @@ main p {
 main a {
     font-weight: bold;
     text-decoration: underline;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+form label {
+    font-weight: bold;
+    font-size: 14px;
 }
 
 footer {
