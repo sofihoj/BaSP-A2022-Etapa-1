@@ -1,0 +1,297 @@
+form {
+    font-size: 14px;
+}
+
+form button {
+    border: 1px solid #373867;
+    border-radius: 5px;
+    color:#373867;
+    padding: 7px 25px;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.reasons {
+    border-top: 2px #373867 solid;
+    border-bottom: 2px #373867 solid;
+    padding-bottom: 15px;
+}
+
+.uses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.uses article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+}
+
+.uses img {
+    max-width: 20%;
+    height: fit-content;
+    margin: 20px 15px 0 0;
+}
+
+.uses div {
+    width: 75%;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.uses h3 {
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.uses p {
+    text-align: justify;
+}
+
+.features {
+    padding-bottom: 30px;
+}
+
+.articles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow-x: auto;
+}
+
+/*Hide the scroll bar in mobile and tablet layout*/
+.articles::-webkit-scrollbar {
+    width: 0px;
+}
+
+.features article {
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin: 0 20px;
+}
+
+.features article:first-child {
+    margin-left: 5px;
+}
+
+.features h3 {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.features p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.features button {
+    padding: 10px 25px;
+    color: #F13312;
+    background-color: #FFF;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 1px solid #F13312;
+    border-radius: 5px;
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.features button:hover {
+    background-color: #F13312;
+    color: #373867;
+}
+
+.form-info {
+    border-bottom: 2px #373867 solid;
+    border-top: 2px #373867 solid;
+    padding-bottom: 30px;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.form-input label {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.form-input input {
+    height: 30px;
+    border: 1px solid #373867;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.radio-buttons {
+    margin: 20px 0;
+}
+
+.radio-buttons p, .message p {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+}
+
+.message textarea {
+    resize: none;
+    width: 100%;
+    height: 90% ;
+    border: 1px solid #373867;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#reset {
+    background-color: #F13312;
+}
+
+#send {
+    background-color: #AACE9B;
+    width: 110px;
+}
+
+#send:hover {
+    background-color: #4EB125;
+}
+
+.history {
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+.history h3 {
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.history p {
+    text-align: justify;
+    line-height: 16px;
+    margin: 0 0 2em 0;
+}
+
+.image-left img, .image-right img {
+    width: 100%;
+}
+
+.history img {
+    margin-bottom: 10px;
+}
+
+.lists {
+    display: flex;
+    max-width: 100%;
+    border-top: 2px #373867 solid;
+    border-bottom: 2px #373867 solid;
+    width: 100%;
+}
+
+.list {
+    padding: 30px 30px;
+    font-size: 14px;
+    display: inline-block;
+    margin: auto;
+}
+
+.list ol {
+    list-style-type: decimal;
+}
+
+.list h4 {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.list li:hover, .list a:hover {
+    color: #0003b6;
+}
+
+@media (min-width: 480px) {
+    .reasons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .uses article {
+        width: 45%;
+    }
+
+    .uses img {
+        margin-right: 10px;
+    }
+
+    .form-div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .form-inputs {
+        width: 75%;
+    }
+
+    .form-input input {
+        width: 75%;
+    }
+
+    .radio-buttons {
+        width: 40%;
+        margin-top: 30px;
+    }
+
+    .message textarea {
+        width: 85%;
+    }
+
+    .image-left, .image-right {
+        top: 0.25em;
+        max-width: 35%;
+    }
+
+    .image-left {
+        float: left;
+        padding: 0 1.5em 1em 0;
+    }
+
+    .image-right {
+        float: right;
+        padding: 0 0 1em 1.5em;
+    }
+
+    .history img {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .articles {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        overflow-x: hidden;
+    }
+
+    .features article {
+        min-width: 23%;
+        margin: 0 10px;
+    }
+}
