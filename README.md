@@ -42,6 +42,12 @@ After making the corrections according to the feedback recieved of the Week-03 w
 <br>[![My Skills](https://skills.thijs.gg/icons?i=html,css,js)](https://skills.thijs.gg)
 - Github pages: [Semana-04](https://sofihoj.github.io/BaSP-A2022-Etapa-1/Semana-04/index.html)
 
+### **Week 06: JAVASCRIPT VALIDATIONS**
+Working on the Trackgenix page this week's task is to add login and employee sign-up screens and make it responsive.<br>
+Also, using JavaScript add validations for the inputs.<br>
+- Languages / tools used:
+<br>[![My Skills](https://skills.thijs.gg/icons?i=html,css,js)](https://skills.thijs.gg)
+- Github pages: [Semana-06](https://sofihoj.github.io/BaSP-A2022-Etapa-1/Semana-06/index.html)
 
 <hr />
 
