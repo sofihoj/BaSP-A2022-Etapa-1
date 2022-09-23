@@ -47,7 +47,7 @@ Working on the Trackgenix page this week's task is to add login and employee sig
 Also, using JavaScript add validations for the inputs.<br>
 - Languages / tools used:
 <br>[![My Skills](https://skills.thijs.gg/icons?i=html,css,js)](https://skills.thijs.gg)
-- Github pages: [Semana-06](https://sofihoj.github.io/BaSP-A2022-Etapa-1/Semana-06/index.html)
+- Github pages: [Semana-06](https://sofihoj.github.io/BaSP-A2022-Etapa-1/Semana-06/views/index.html)
 
 <hr />
 
