@@ -1,0 +1,111 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+}
+
+footer {
+    margin-bottom: 15px;
+    border-top: 2px #373867 solid;
+}
+
+.content {
+    padding: 1em;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-container  {
+    border: 2px #373867 solid;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 30px 20px;
+    padding: 25px 0;
+    box-shadow: 0px 0px 13px 7px rgba(170,206,155,0.75);
+}
+
+.form-container h2 {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.form-inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+form input {
+    margin: 10px 0 20px 0;
+    height: 30px;
+    border: 1px solid #373867;
+    border-radius: 4px;
+    width: 100%;
+}
+
+form label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+}
+
+#btn-signup {
+    color: #F13312;
+    background-color: #FFF;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 1px solid #F13312;
+    border-radius: 5px;
+    padding: 10px 50px;
+    align-self: center;
+    margin-top: 20px;
+}
+
+#btn-signup:hover {
+    background-color: #F13312;
+    color: #373867;
+}
+
+@media (min-width: 1024px) {
+    .form-inputs {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .form-input {
+        width: 40%;
+        margin: 15px 25px 15px 15px;
+    }
+
+    form input {
+        width: 100%;
+        margin: 15px 15px 15px 0;
+    }
+
+    .email {
+        width: 89%;
+        margin: 15px;
+    }
+
+    #email {
+        width: 97%;
+        margin: 15px 0px 15px 0;
+    }
+}
