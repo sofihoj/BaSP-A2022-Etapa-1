@@ -58,5 +58,16 @@ window.onload = function() {
         formPassword.classList.remove('red-border');
         passwordInput.removeChild(p);
     }
+
+    /* BUTTON */
+    var button = document.getElementById('btn-login');
+
+    button.onclick = function(){
+        if (formEmail.classList.contains('green-border') && formPassword.classList.contains('green-border')){
+            alert('Mail: ' + formEmail.value + '\nPassword: ' + formPassword.value);
+        } else {
+            alert('Some imputs are wrong')
+        }
+  }
 }
 
