@@ -21,18 +21,21 @@ Adapting the desing of the desktop landing page made by other partners to an htm
 <br>
 - Languages / tools used:
 <br>[![My Skills](https://skills.thijs.gg/icons?i=html)](https://skills.thijs.gg)
+- Take a look on the code [here](https://github.com/sofihoj/BaSP-A2022-Etapa-1/tree/master/Semana-01)
 
 ### **Week 02: CSS**
 Include CSS styles to the HTML structure so it can look just like the landing page layout from Figma.
 <br>
 - Languages / tools used:
 <br>[![My Skills](https://skills.thijs.gg/icons?i=html,css)](https://skills.thijs.gg)
+- Take a look on the code [here](https://github.com/sofihoj/BaSP-A2022-Etapa-1/tree/master/Semana-02)
 
 ### **Week 03: FLEXBOX**
 Adapt the style to make the landing page responsive using flexbox applying the Mobile-first concept.
 <br>
 - Languages / tools used:
 <br>[![My Skills](https://skills.thijs.gg/icons?i=html,css)](https://skills.thijs.gg)
+- Take a look on the code [here](https://github.com/sofihoj/BaSP-A2022-Etapa-1/tree/master/Semana-03)
 - Github pages: [Semana-03](https://sofihoj.github.io/BaSP-A2022-Etapa-1/Semana-03/index.html)
 
 ### **Week 04: JAVASCRIPT**
@@ -40,6 +43,7 @@ After making the corrections according to the feedback recieved of the Week-03 w
 <br>
 - Languages / tools used:
 <br>[![My Skills](https://skills.thijs.gg/icons?i=html,css,js)](https://skills.thijs.gg)
+- Take a look on the code [here](https://github.com/sofihoj/BaSP-A2022-Etapa-1/tree/master/Semana-04)
 - Github pages: [Semana-04](https://sofihoj.github.io/BaSP-A2022-Etapa-1/Semana-04/index.html)
 
 ### **Week 06: JAVASCRIPT VALIDATIONS**
@@ -47,6 +51,7 @@ Working on the Trackgenix page this week's task is to add login and employee sig
 Also, using JavaScript add validations for the inputs.<br>
 - Languages / tools used:
 <br>[![My Skills](https://skills.thijs.gg/icons?i=html,css,js)](https://skills.thijs.gg)
+- Take a look on the code [here](https://github.com/sofihoj/BaSP-A2022-Etapa-1/tree/master/Semana-06)
 - Github pages: [Semana-06](https://sofihoj.github.io/BaSP-A2022-Etapa-1/Semana-06/views/index.html)
 
 <hr />
