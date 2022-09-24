@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="../styles/sidebar.css">
         <link rel="stylesheet" href="../styles/footer.css">
         <link rel="stylesheet" href="../styles/login.css">
+        <script src="../javascript/login.js"></script>
         <title>Trackgenix</title>
     </head>
     <body>
@@ -60,13 +61,13 @@
                     <div class="form-container">
                         <h2>LogIn</h2>
                         <form>
-                            <div class="form-input">
+                            <div class="form-input" id="emailInput">
                                 <label for="email">Email:</label>
-                                <input type="text" name="email" placeholder="Enter your email">
+                                <input type="text" name="email" id="formEmail" placeholder="Enter your email">
                             </div>
-                            <div class="form-input">
+                            <div class="form-input" id="passwordInput">
                                 <label for="password">Password:</label>
-                                <input type="password" name="password" placeholder="Enter your password">
+                                <input type="password" name="password" id="formPassword" placeholder="Enter your password">
                             </div>
                             <button id="btn-login">Login</button>
                         </form>
