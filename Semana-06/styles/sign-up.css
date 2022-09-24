@@ -83,6 +83,10 @@ form label {
 }
 
 @media (min-width: 1024px) {
+    form {
+        width: fit-content;
+    }
+
     .form-inputs {
         display: flex;
         flex-direction: row;
@@ -91,21 +95,21 @@ form label {
 
     .form-input {
         width: 40%;
-        margin: 15px 25px 15px 15px;
+        margin: 0 20px;
     }
 
     form input {
         width: 100%;
-        margin: 15px 15px 15px 0;
+        margin: 10px 15px 15px 0;
     }
 
     .email {
-        width: 89%;
-        margin: 15px;
+        width: 85%;
+        margin: 0 20px;
     }
 
-    #email {
+    /* #email {
         width: 97%;
         margin: 15px 0px 15px 0;
-    }
+    } */
 }
