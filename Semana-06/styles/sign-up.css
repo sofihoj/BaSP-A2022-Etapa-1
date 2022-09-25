@@ -82,6 +82,22 @@ form label {
     color: #373867;
 }
 
+form p {
+    color: #ff0000;
+    font-size: 12px;
+    align-self: flex-end;
+    margin-top: -8px;
+    margin-bottom: 0;
+}
+
+.green-border {
+    border: 1px solid #00FF00;
+}
+
+.red-border {
+    border: 1px solid #FF0000
+}
+
 @media (min-width: 1024px) {
     form {
         width: fit-content;

@@ -29,15 +29,36 @@ window.onload = function() {
     var passwordInput = document.getElementById('passwordInput');
 
     formPassword.onblur = function() {
-        var numbers = false;
-        var letters = false;
-        for (var i = 0; i < formPassword.value.length; i++){
-            var element = formPassword.value[i];
-            parseElement = parseInt(element)
-            if (isNaN(parseElement)) {
-                letters = true;
-            } else if (!isNaN(parseElement)) {
-                numbers = true;
+        // var numbers = false;
+        // var letters = false;
+        // var specialCaracters = true;
+        // for (var i = 0; i < formPassword.value.length; i++){
+        //     var element = formPassword.value[i];
+        //     var charCode = element.charCodeAt(i)
+        //     parseElement = parseInt(element)
+        //     if (isNaN(parseElement)) {
+        //         letters = true;
+        //     } else if (!isNaN(parseElement)) {
+        //         numbers = true;
+        //     } else if (charCode > 32 && charCode < 48) {
+        //         specialCaracters = false;
+        //     }
+
+        var numbers = "0123456789";
+        var validationNumber = false
+
+        for(i=0; i<formPassword.value.length; i++){
+            if (numbers.indexOf(formPassword.value.charAt(i),0)!=-1){
+                validationNumber = true;
+            }
+        }
+
+        var letters = "abcdefghyjklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
+        var validationLetters = false
+
+        for(i=0; i<formPassword.value.length; i++){
+            if (letters.indexOf(formPassword.value.charAt(i),0)!=-1){
+                validationLetters = true;
             }
         }
 
@@ -45,7 +66,8 @@ window.onload = function() {
             formPassword.classList.add('red-border');
             p.innerHTML = 'Password is required';
             passwordInput.appendChild(p);
-        } else if (formPassword.value.length < 8 || numbers !=true || letters !=true) {
+        // } else if (formPassword.value.length < 8 || numbers !=true || letters !=true) {
+        } else if (formPassword.value.length < 8 || validationNumber != true || validationLetters != true) {
             formPassword.classList.add('red-border');
             p.innerHTML = 'Password must have at least 8 characters of letters and numbers';
             passwordInput.appendChild(p);
