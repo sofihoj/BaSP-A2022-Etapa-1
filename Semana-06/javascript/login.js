@@ -33,7 +33,7 @@ window.onload = function() {
         // var letters = false;
         // var specialCaracters = true;
         // for (var i = 0; i < formPassword.value.length; i++){
-        //     var element = formPassword.value[i];
+        //     var element = formPassword.value;
         //     var charCode = element.charCodeAt(i)
         //     parseElement = parseInt(element)
         //     if (isNaN(parseElement)) {
