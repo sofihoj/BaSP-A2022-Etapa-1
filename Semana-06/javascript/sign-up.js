@@ -120,6 +120,25 @@ window.onload = function(){
         idP.removeChild(p);
     }
 
+    /* BIRTHDAY VALIDATION */
+    var formBirthday = inputs[3];
+    var birthdayP = inputsP[3];
+
+    formBirthday.onblur = function() {
+        if (formBirthday.value == '') {
+            formBirthday.classList.add('red-border');
+            p.innerHTML = 'Please enter your birthday'
+            birthdayP.appendChild(p)
+        } else {
+            formBirthday.classList.add('green-border')
+        }
+
+        formBirthday.onfocus = function () {
+            formBirthday.classList.remove('red-border');
+            birthdayP.removeChild(p);
+        }
+    }
+
     /* PHONE VALIDATION */
     var formPhone = inputs[4];
     var phoneP = inputsP[4];
@@ -141,14 +160,14 @@ window.onload = function(){
             formPhone.classList.add('red-border')
             p.innerHTML = 'Phone number is required'
             phoneP.appendChild(p);
-        } else if (formPhone.value.length != 10) {
-            formPhone.classList.add('red-border');
-            p.innerHTML = 'Phone number should have 10 numbers'
-            phoneP.appendChild(p)
         } else if (!numbers){
             formPhone.classList.add('red-border')
             p.innerHTML = 'Phone number should have only numbers'
             phoneP.appendChild(p);
+        } else if (formPhone.value.length != 10) {
+            formPhone.classList.add('red-border');
+            p.innerHTML = 'Phone number should have 10 numbers'
+            phoneP.appendChild(p)
         } else {
             formPhone.classList.add('green-border')
         }
@@ -159,13 +178,113 @@ window.onload = function(){
         phoneP.removeChild(p);
     }
 
+    /* ADRESS VALIDATION */
+    var formAdress = inputs[5];
+    var adressP = inputsP[5];
+
+    formAdress.onblur = function() {
+        if ((formAdress.value).length == '') {
+            formAdress.classList.add('red-border')
+            p.innerHTML = ('Adress is required')
+            adressP.appendChild(p)
+        } else {
+            formAdress.classList.add('green-border')
+
+        }
+    }
+
+    formAdress.onfocus = function() {
+        formAdress.classList.remove('red-border');
+        adressP.removeChild(p);
+    }
+
+
+    /* CITY VALIDATION */
+    var formCity = inputs[6];
+    var cityP = inputsP[6];
+
+    formCity.onblur = function() {
+        var numbers = "0123456789";
+        var validationNumber = false
+
+        for(i=0; i<formCity.value.length; i++){
+            if (numbers.indexOf(formCity.value.charAt(i),0)!=-1){
+                validationNumber = true;
+            }
+        }
+
+        var letters = "abcdefghyjklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
+        var validationLetters = false
+
+        for(i=0; i<formCity.value.length; i++){
+            if (letters.indexOf(formCity.value.charAt(i),0)!=-1){
+                validationLetters = true;
+            }
+        }
+
+        if (formCity.value === '') {
+            formCity.classList.add('red-border');
+            p.innerHTML = 'City name is required';
+            cityP.appendChild(p);
+        } else if (formCity.value.length < 4 || validationNumber != true && validationLetters != true) {
+            formCity.classList.add('red-border');
+            p.innerHTML = 'City name must have more than 3 characters of letters&numbers';
+            cityP.appendChild(p);
+        } else {
+            formCity.classList.add('green-border');
+        }
+    }
+
+    formCity.onfocus = function () {
+        formCity.classList.remove('red-border');
+        cityP.removeChild(p);
+    }
+
+    /*  ZIP CODE VALIDATION */
+    var formZipCode = inputs[7];
+    var zipCodeP = inputsP[7];
+
+    formZipCode.onblur = function () {
+        var numbers;
+        for (var i = 0; i < formZipCode.value.length; i++){
+            var element = formZipCode.value;
+            var charCode = element.charCodeAt(i)
+            if ((charCode > 47 && charCode < 58)) {
+                numbers = true;
+            } else {
+                numbers = false;
+                break
+            }
+        }
+
+        if (formZipCode.value == ''){
+            formZipCode.classList.add('red-border')
+            p.innerHTML = 'Zip code is required'
+            zipCodeP.appendChild(p);
+        } else if (!numbers){
+            formZipCode.classList.add('red-border')
+            p.innerHTML = 'Zip code should have only numbers'
+            zipCodeP.appendChild(p);
+        } else if (formZipCode.value.length < 4 || formZipCode.value.length > 5) {
+            formZipCode.classList.add('red-border');
+            p.innerHTML = 'Zip code should have 4 or 5 numbers'
+            zipCodeP.appendChild(p)
+        } else {
+            formZipCode.classList.add('green-border')
+        }
+    }
+
+    formZipCode.onfocus = function () {
+        formZipCode.classList.remove('red-border');
+        zipCodeP.removeChild(p);
+    }
 
 
     /* EMAIL VALIDATION */
     var formEmail = inputs[8];
     var emailP = inputsP[8];
     var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
-    
+
     formEmail.onblur = function() {
         if (formEmail.value === '') {
             formEmail.classList.add('red-border');
@@ -183,5 +302,91 @@ window.onload = function(){
     formEmail.onfocus = function () {
         formEmail.classList.remove('red-border');
         emailP.removeChild(p);
+    }
+
+    /* PASSWORD VALIDATION */
+    var formPassword = inputs[9];
+    var passwordP = inputsP[9];
+
+    formPassword.onblur = function() {
+        var numbers = "0123456789";
+        var validationNumber = false
+
+        for(i=0; i<formPassword.value.length; i++){
+            if (numbers.indexOf(formPassword.value.charAt(i),0)!=-1){
+                validationNumber = true;
+            }
+        }
+
+        var letters = "abcdefghyjklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
+        var validationLetters = false
+
+        for(i=0; i<formPassword.value.length; i++){
+            if (letters.indexOf(formPassword.value.charAt(i),0)!=-1){
+                validationLetters = true;
+            }
+        }
+
+        if (formPassword.value === '') {
+            formPassword.classList.add('red-border');
+            p.innerHTML = 'Password is required';
+            passwordP.appendChild(p);
+        } else if (formPassword.value.length < 8 || validationNumber != true || validationLetters != true) {
+            formPassword.classList.add('red-border');
+            p.innerHTML = 'Password must have at least 8 characters of letters and numbers';
+            passwordP.appendChild(p);
+        } else {
+            formPassword.classList.add('green-border');
+        }
+    }
+
+    formPassword.onfocus = function () {
+        formPassword.classList.remove('red-border');
+        passwordP.removeChild(p);
+    }
+
+    /* PASSWORD REPEAT VALIDATION */
+    var formPassword2 = inputs[10];
+    var password2P = inputsP[10];
+
+    formPassword2.onblur = function() {
+        var numbers = "0123456789";
+        var validationNumber = false
+
+        for(i=0; i<formPassword2.value.length; i++){
+            if (numbers.indexOf(formPassword2.value.charAt(i),0)!=-1){
+                validationNumber = true;
+            }
+        }
+
+        var letters = "abcdefghyjklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
+        var validationLetters = false
+
+        for(i=0; i<formPassword2.value.length; i++){
+            if (letters.indexOf(formPassword2.value.charAt(i),0)!=-1){
+                validationLetters = true;
+            }
+        }
+
+        if (formPassword2.value === '') {
+            formPassword2.classList.add('red-border');
+            p.innerHTML = 'Password is required';
+            password2P.appendChild(p);
+        } else if (formPassword2.value.length < 8 || validationNumber != true || validationLetters != true) {
+            formPassword2.classList.add('red-border');
+            p.innerHTML = 'Password must have at least 8 characters of letters and numbers';
+            password2P.appendChild(p);
+        } else if (formPassword.value != formPassword2.value){
+            formPassword2.classList.add('red-border');
+            p.innerHTML = "Passwords doesn't match";
+            password2P.appendChild(p);;
+        } else {
+            formPassword2.classList.add('green-border');
+        }
+    }
+
+    formPassword2.onfocus = function () {
+        formPassword2.classList.remove('red-border');
+        password2P.removeChild(p);
     }
 }

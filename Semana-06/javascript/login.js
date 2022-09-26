@@ -90,6 +90,6 @@ window.onload = function() {
         } else {
             alert('Some imputs are wrong')
         }
-  }
+    }
 }
 
