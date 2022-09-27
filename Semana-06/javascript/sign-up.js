@@ -2,6 +2,7 @@ window.onload = function(){
     var inputs = document.getElementsByTagName('input');
     var inputsP = document.getElementsByClassName('form-input');
     var p = document.createElement('p');
+    console.log(inputs[2].name)
 
     /* NAME VALIDATION */
     var formName = inputs[0];
@@ -38,8 +39,7 @@ window.onload = function(){
     }
 
     formName.onfocus = function () {
-        formName.classList.remove('red-border');
-        nameP.removeChild(p);
+        removeP(formName);
     }
 
     /* LAST NAME VALIDATION */
@@ -77,8 +77,7 @@ window.onload = function(){
     }
 
     formLastName.onfocus = function () {
-        formLastName.classList.remove('red-border');
-        lastNameP.removeChild(p);
+        removeP(formLastName);
     }
 
     /* ID VALIDATION */
@@ -116,8 +115,7 @@ window.onload = function(){
     }
 
     formId.onfocus = function () {
-        formId.classList.remove('red-border');
-        idP.removeChild(p);
+        removeP(formId);
     }
 
     /* BIRTHDAY VALIDATION */
@@ -132,11 +130,10 @@ window.onload = function(){
         } else {
             formBirthday.classList.add('green-border')
         }
+    }
 
-        formBirthday.onfocus = function () {
-            formBirthday.classList.remove('red-border');
-            birthdayP.removeChild(p);
-        }
+    formBirthday.onfocus = function () {
+        removeP(formBirthday);
     }
 
     /* PHONE VALIDATION */
@@ -174,8 +171,7 @@ window.onload = function(){
     }
 
     formPhone.onfocus = function () {
-        formPhone.classList.remove('red-border');
-        phoneP.removeChild(p);
+        removeP(formPhone);
     }
 
     /* ADRESS VALIDATION */
@@ -183,21 +179,27 @@ window.onload = function(){
     var adressP = inputsP[5];
 
     formAdress.onblur = function() {
+        var blankSpace = formAdress.value.indexOf(' ')
         if ((formAdress.value).length == '') {
             formAdress.classList.add('red-border')
             p.innerHTML = ('Adress is required')
             adressP.appendChild(p)
+        } else if ((formAdress.value).length < 5) {
+            formAdress.classList.add('red-border')
+            p.innerHTML = ('Adress must have at least 5 characters')
+            adressP.appendChild(p)
+        } else if (!hasLetters((formAdress.value).substring(0, blankSpace)) || !hasNumbers((formAdress.value).substring(blankSpace+1, (formAdress.value).length))){
+            formAdress.classList.add('red-border')
+            p.innerHTML = ('Wrong adress format')
+            adressP.appendChild(p)
         } else {
             formAdress.classList.add('green-border')
-
         }
     }
 
     formAdress.onfocus = function() {
-        formAdress.classList.remove('red-border');
-        adressP.removeChild(p);
+        removeP(formAdress);
     }
-
 
     /* CITY VALIDATION */
     var formCity = inputs[6];
@@ -236,8 +238,7 @@ window.onload = function(){
     }
 
     formCity.onfocus = function () {
-        formCity.classList.remove('red-border');
-        cityP.removeChild(p);
+        removeP(formCity);
     }
 
     /*  ZIP CODE VALIDATION */
@@ -275,8 +276,7 @@ window.onload = function(){
     }
 
     formZipCode.onfocus = function () {
-        formZipCode.classList.remove('red-border');
-        zipCodeP.removeChild(p);
+        removeP(formZipCode);
     }
 
 
@@ -300,8 +300,7 @@ window.onload = function(){
     }
 
     formEmail.onfocus = function () {
-        formEmail.classList.remove('red-border');
-        emailP.removeChild(p);
+        removeP(formEmail);
     }
 
     /* PASSWORD VALIDATION */
@@ -341,8 +340,7 @@ window.onload = function(){
     }
 
     formPassword.onfocus = function () {
-        formPassword.classList.remove('red-border');
-        passwordP.removeChild(p);
+        removeP(formPassword);
     }
 
     /* PASSWORD REPEAT VALIDATION */
@@ -378,7 +376,7 @@ window.onload = function(){
             password2P.appendChild(p);
         } else if (formPassword.value != formPassword2.value){
             formPassword2.classList.add('red-border');
-            p.innerHTML = "Passwords doesn't match";
+            p.innerHTML = "Passwords don't match";
             password2P.appendChild(p);;
         } else {
             formPassword2.classList.add('green-border');
@@ -386,7 +384,56 @@ window.onload = function(){
     }
 
     formPassword2.onfocus = function () {
-        formPassword2.classList.remove('red-border');
-        password2P.removeChild(p);
+        removeP(formPassword2);
+    }
+
+    /* BUTTON */
+    var button = document.getElementById('btn-signup');
+
+    button.onclick = function(e){
+        e.preventDefault();
+        for (var i = 0; i < inputs.length ; i++){
+            if (inputs[i].classList.contains('green-border')){
+                alert(alertMessage());
+            } else {
+                alert('Some inputs are wrong.')
+            }
+        }
+    }
+
+    /* FUNCTIONS */
+    function hasLetters(input) {
+        for (var i = 0; i < input.length; i++){
+            var charCode = input.charCodeAt(i)
+            if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+
+    function hasNumbers(input) {
+        for (var i = 0; i < input.length; i++){
+            var charCode = input.charCodeAt(i)
+            if ((charCode > 47 && charCode < 58)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+
+    function removeP(input) {
+        input.classList.remove('red-border');
+        p.innerHTML = '';
+    }
+
+    function alertMessage () {
+        var message = [];
+        for (i = 0; i < inputs.length; i++) {
+            message.push(inputs[i].name + ': ' + inputs[i].value);
+        }
+        return message.join('\n');
     }
 }
