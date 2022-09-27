@@ -1,12 +1,10 @@
 window.onload = function(){
     var inputs = document.getElementsByTagName('input');
     var inputsP = document.getElementsByClassName('form-input');
-    var p = document.createElement('p');
-    console.log(inputs[2].name)
 
     /* NAME VALIDATION */
     var formName = inputs[0];
-    var nameP = inputsP[0];
+    var nameP = document.createElement('p');
 
     formName.onblur = function() {
         var letters;
@@ -23,16 +21,16 @@ window.onload = function(){
 
         if (formName.value == '') {
             formName.classList.add('red-border')
-            p.innerHTML = 'Name is required'
-            nameP.appendChild(p);
+            nameP.innerHTML = 'Name is required'
+            formName.parentElement.insertBefore(nameP, formName.nextElementSibling)
         } else if (formName.value.length < 4) {
             formName.classList.add('red-border')
-            p.innerHTML = 'Name should have more than 3 letters'
-            nameP.appendChild(p);
+            nameP.innerHTML = 'Name should have more than 3 letters'
+            formName.parentElement.insertBefore(nameP, formName.nextElementSibling)
         } else if (!letters) {
             formName.classList.add('red-border')
-            p.innerHTML = 'Name should have only letters'
-            nameP.appendChild(p);
+            nameP.innerHTML = 'Name should have only letters'
+            formName.parentElement.insertBefore(nameP, formName.nextElementSibling)
         } else {
             formName.classList.add('green-border')
         }
@@ -44,7 +42,7 @@ window.onload = function(){
 
     /* LAST NAME VALIDATION */
     var formLastName = inputs[1];
-    var lastNameP = inputsP[1];
+    var lastNameP = document.createElement('p');
 
     formLastName.onblur = function() {
         var letters;
@@ -61,16 +59,16 @@ window.onload = function(){
 
         if (formLastName.value == '') {
             formLastName.classList.add('red-border')
-            p.innerHTML = 'Last name is required'
-            lastNameP.appendChild(p);
+            lastNameP.innerHTML = 'Last name is required'
+            formLastName.parentElement.insertBefore(lastNameP, formLastName.nextElementSibling)
         } else if (formLastName.value.length < 4) {
             formLastName.classList.add('red-border')
-            p.innerHTML = 'Last name should have more than 3 letters'
-            lastNameP.appendChild(p);
+            lastNameP.innerHTML = 'Last name should have more than 3 letters'
+            formLastName.parentElement.insertBefore(lastNameP, formLastName.nextElementSibling)
         } else if (!letters) {
             formLastName.classList.add('red-border')
-            p.innerHTML = 'Last name should have only letters'
-            lastNameP.appendChild(p);
+            lastNameP.innerHTML = 'Last name should have only letters'
+            formLastName.parentElement.insertBefore(lastNameP, formLastName.nextElementSibling)
         } else {
             formLastName.classList.add('green-border')
         }
@@ -82,7 +80,7 @@ window.onload = function(){
 
     /* ID VALIDATION */
     var formId = inputs[2];
-    var idP = inputsP[2];
+    var idP = document.createElement('p');
 
     formId.onblur = function () {
         var numbers;
@@ -99,16 +97,16 @@ window.onload = function(){
 
         if (formId.value == ''){
             formId.classList.add('red-border')
-            p.innerHTML = 'ID is required'
-            idP.appendChild(p);
+            idP.innerHTML = 'ID is required'
+            formId.parentElement.insertBefore(idP, formId.nextElementSibling)
         } else if (formId.value.length < 7) {
             formId.classList.add('red-border');
-            p.innerHTML = 'ID should have at least 7 numbers'
-            idP.appendChild(p)
+            idP.innerHTML = 'ID should have at least 7 numbers'
+            formId.parentElement.insertBefore(idP, formId.nextElementSibling)
         } else if (!numbers){
             formId.classList.add('red-border')
-            p.innerHTML = 'ID should have only numbers'
-            idP.appendChild(p);
+            idP.innerHTML = 'ID should have only numbers'
+            formId.parentElement.insertBefore(idP, formId.nextElementSibling)
         } else {
             formId.classList.add('green-border')
         }
@@ -120,13 +118,13 @@ window.onload = function(){
 
     /* BIRTHDAY VALIDATION */
     var formBirthday = inputs[3];
-    var birthdayP = inputsP[3];
+    var birthdayP = document.createElement('p');
 
     formBirthday.onblur = function() {
         if (formBirthday.value == '') {
             formBirthday.classList.add('red-border');
-            p.innerHTML = 'Please enter your birthday'
-            birthdayP.appendChild(p)
+            birthdayP.innerHTML = 'Birthday is required'
+            formBirthday.parentElement.insertBefore(birthdayP, formBirthday.nextElementSibling)
         } else {
             formBirthday.classList.add('green-border')
         }
@@ -138,7 +136,7 @@ window.onload = function(){
 
     /* PHONE VALIDATION */
     var formPhone = inputs[4];
-    var phoneP = inputsP[4];
+    var phoneP = document.createElement('p');
 
     formPhone.onblur = function () {
         var numbers;
@@ -155,16 +153,16 @@ window.onload = function(){
 
         if (formPhone.value == ''){
             formPhone.classList.add('red-border')
-            p.innerHTML = 'Phone number is required'
-            phoneP.appendChild(p);
+            phoneP.innerHTML = 'Phone number is required'
+            formPhone.parentElement.insertBefore(phoneP, formPhone.nextElementSibling)
         } else if (!numbers){
             formPhone.classList.add('red-border')
-            p.innerHTML = 'Phone number should have only numbers'
-            phoneP.appendChild(p);
+            phoneP.innerHTML = 'Phone number should have only numbers'
+            formPhone.parentElement.insertBefore(phoneP, formPhone.nextElementSibling)
         } else if (formPhone.value.length != 10) {
             formPhone.classList.add('red-border');
-            p.innerHTML = 'Phone number should have 10 numbers'
-            phoneP.appendChild(p)
+            phoneP.innerHTML = 'Phone number should have 10 numbers'
+            formPhone.parentElement.insertBefore(phoneP, formPhone.nextElementSibling)
         } else {
             formPhone.classList.add('green-border')
         }
@@ -176,22 +174,22 @@ window.onload = function(){
 
     /* ADRESS VALIDATION */
     var formAdress = inputs[5];
-    var adressP = inputsP[5];
+    var adressP = document.createElement('p');
 
     formAdress.onblur = function() {
         var blankSpace = formAdress.value.indexOf(' ')
         if ((formAdress.value).length == '') {
             formAdress.classList.add('red-border')
-            p.innerHTML = ('Adress is required')
-            adressP.appendChild(p)
+            adressP.innerHTML = ('Adress is required')
+            formAdress.parentElement.insertBefore(adressP, formAdress.nextElementSibling)
         } else if ((formAdress.value).length < 5) {
             formAdress.classList.add('red-border')
-            p.innerHTML = ('Adress must have at least 5 characters')
-            adressP.appendChild(p)
+            adressP.innerHTML = ('Adress must have at least 5 characters')
+            formAdress.parentElement.insertBefore(adressP, formAdress.nextElementSibling)
         } else if (!hasLetters((formAdress.value).substring(0, blankSpace)) || !hasNumbers((formAdress.value).substring(blankSpace+1, (formAdress.value).length))){
             formAdress.classList.add('red-border')
-            p.innerHTML = ('Wrong adress format')
-            adressP.appendChild(p)
+            adressP.innerHTML = ('Wrong adress format')
+            formAdress.parentElement.insertBefore(adressP, formAdress.nextElementSibling)
         } else {
             formAdress.classList.add('green-border')
         }
@@ -203,7 +201,7 @@ window.onload = function(){
 
     /* CITY VALIDATION */
     var formCity = inputs[6];
-    var cityP = inputsP[6];
+    var cityP = document.createElement('p');
 
     formCity.onblur = function() {
         var numbers = "0123456789";
@@ -226,12 +224,12 @@ window.onload = function(){
 
         if (formCity.value === '') {
             formCity.classList.add('red-border');
-            p.innerHTML = 'City name is required';
-            cityP.appendChild(p);
+            cityP.innerHTML = 'City name is required';
+            formCity.parentElement.insertBefore(cityP, formCity.nextElementSibling)
         } else if (formCity.value.length < 4 || validationNumber != true && validationLetters != true) {
             formCity.classList.add('red-border');
-            p.innerHTML = 'City name must have more than 3 characters of letters&numbers';
-            cityP.appendChild(p);
+            cityP.innerHTML = 'City name must have more than 3 characters of letters&numbers';
+            formCity.parentElement.insertBefore(cityP, formCity.nextElementSibling)
         } else {
             formCity.classList.add('green-border');
         }
@@ -243,7 +241,7 @@ window.onload = function(){
 
     /*  ZIP CODE VALIDATION */
     var formZipCode = inputs[7];
-    var zipCodeP = inputsP[7];
+    var zipCodeP = document.createElement('p');
 
     formZipCode.onblur = function () {
         var numbers;
@@ -260,16 +258,16 @@ window.onload = function(){
 
         if (formZipCode.value == ''){
             formZipCode.classList.add('red-border')
-            p.innerHTML = 'Zip code is required'
-            zipCodeP.appendChild(p);
+            zipCodeP.innerHTML = 'Zip code is required'
+            formZipCode.parentElement.insertBefore(zipCodeP, formZipCode.nextElementSibling)
         } else if (!numbers){
             formZipCode.classList.add('red-border')
-            p.innerHTML = 'Zip code should have only numbers'
-            zipCodeP.appendChild(p);
+            zipCodeP.innerHTML = 'Zip code should have only numbers'
+            formZipCode.parentElement.insertBefore(zipCodeP, formZipCode.nextElementSibling)
         } else if (formZipCode.value.length < 4 || formZipCode.value.length > 5) {
             formZipCode.classList.add('red-border');
-            p.innerHTML = 'Zip code should have 4 or 5 numbers'
-            zipCodeP.appendChild(p)
+            zipCodeP.innerHTML = 'Zip code should have 4 or 5 numbers'
+            formZipCode.parentElement.insertBefore(zipCodeP, formZipCode.nextElementSibling)
         } else {
             formZipCode.classList.add('green-border')
         }
@@ -282,18 +280,18 @@ window.onload = function(){
 
     /* EMAIL VALIDATION */
     var formEmail = inputs[8];
-    var emailP = inputsP[8];
+    var emailP = document.createElement('p');
     var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
 
     formEmail.onblur = function() {
         if (formEmail.value === '') {
             formEmail.classList.add('red-border');
-            p.innerHTML = 'Email is required'
-            emailP.appendChild(p);
+            emailP.innerHTML = 'Email is required'
+            formEmail.parentElement.insertBefore(emailP, formEmail.nextElementSibling)
         } else if (!emailExpression.test(formEmail.value)) {
             formEmail.classList.add('red-border');
-            p.innerHTML = 'Correct format should be email@domain.com';
-            emailP.appendChild(p);
+            emailP.innerHTML = 'Correct format should be email@domain.com';
+            formEmail.parentElement.insertBefore(emailP, formEmail.nextElementSibling)
         } else {
             formEmail.classList.add('green-border');
         }
@@ -305,7 +303,7 @@ window.onload = function(){
 
     /* PASSWORD VALIDATION */
     var formPassword = inputs[9];
-    var passwordP = inputsP[9];
+    var passwordP = document.createElement('p');
 
     formPassword.onblur = function() {
         var numbers = "0123456789";
@@ -328,12 +326,12 @@ window.onload = function(){
 
         if (formPassword.value === '') {
             formPassword.classList.add('red-border');
-            p.innerHTML = 'Password is required';
-            passwordP.appendChild(p);
+            passwordP.innerHTML = 'Password is required';
+            formPassword.parentElement.insertBefore(passwordP, formPassword.nextElementSibling)
         } else if (formPassword.value.length < 8 || validationNumber != true || validationLetters != true) {
             formPassword.classList.add('red-border');
-            p.innerHTML = 'Password must have at least 8 characters of letters and numbers';
-            passwordP.appendChild(p);
+            passwordP.innerHTML = 'Password must have at least 8 characters of letters and numbers';
+            formPassword.parentElement.insertBefore(passwordP, formPassword.nextElementSibling)
         } else {
             formPassword.classList.add('green-border');
         }
@@ -345,7 +343,7 @@ window.onload = function(){
 
     /* PASSWORD REPEAT VALIDATION */
     var formPassword2 = inputs[10];
-    var password2P = inputsP[10];
+    var password2P = document.createElement('p');
 
     formPassword2.onblur = function() {
         var numbers = "0123456789";
@@ -368,16 +366,16 @@ window.onload = function(){
 
         if (formPassword2.value === '') {
             formPassword2.classList.add('red-border');
-            p.innerHTML = 'Password is required';
-            password2P.appendChild(p);
+            password2P.innerHTML = 'Password is required';
+            formPassword2.parentElement.insertBefore(password2P, formPassword2.nextElementSibling)
         } else if (formPassword2.value.length < 8 || validationNumber != true || validationLetters != true) {
             formPassword2.classList.add('red-border');
-            p.innerHTML = 'Password must have at least 8 characters of letters and numbers';
-            password2P.appendChild(p);
+            password2P.innerHTML = 'Password must have at least 8 characters of letters and numbers';
+            formPassword2.parentElement.insertBefore(password2P, formPassword2.nextElementSibling)
         } else if (formPassword.value != formPassword2.value){
             formPassword2.classList.add('red-border');
-            p.innerHTML = "Passwords don't match";
-            password2P.appendChild(p);;
+            password2P.innerHTML = "Passwords don't match";
+            formPassword2.parentElement.insertBefore(password2P, formPassword2.nextElementSibling)
         } else {
             formPassword2.classList.add('green-border');
         }
@@ -390,16 +388,38 @@ window.onload = function(){
     /* BUTTON */
     var button = document.getElementById('btn-signup');
 
-    button.onclick = function(e){
+    button.onclick = function (e) {
         e.preventDefault();
-        for (var i = 0; i < inputs.length ; i++){
-            if (inputs[i].classList.contains('green-border')){
-                alert(alertMessage());
-            } else {
-                alert('Some inputs are wrong.')
+        var completed = 0;
+        var errors = [];
+        var message = '';
+        for (var i = 0; i < inputs.length; i++) {
+            if (inputs[i].classList.contains('green-border')) {
+                completed++;
+            } else if (inputs[i].classList.contains('red-border')) {
+                errors.push(inputs[i].nextElementSibling);
             }
         }
+        if (completed == inputs.length) {
+            message = 'Sign up successful!\n';
+            for (var i = 0; i < inputs.length; i++) {
+                message += inputs[i].name + ': ' + inputs[i].value + '\n';
+            }
+
+        } else if (errors.length == 0) {
+            message = 'All fields are required.';
+        } else {
+            message = 'Something went wrong\n';
+            if (errors.length + completed !== inputs.length) {
+                message += 'Complete all fields\n'
+            }
+            for (var i = 0; i < errors.length; i++) {
+                message += errors[i].innerHTML + '\n';
+            }
+        }
+        alert(message);
     }
+
 
     /* FUNCTIONS */
     function hasLetters(input) {
@@ -426,14 +446,8 @@ window.onload = function(){
 
     function removeP(input) {
         input.classList.remove('red-border');
-        p.innerHTML = '';
-    }
-
-    function alertMessage () {
-        var message = [];
-        for (i = 0; i < inputs.length; i++) {
-            message.push(inputs[i].name + ': ' + inputs[i].value);
+        if (input.nextElementSibling) {
+            input.parentElement.removeChild(input.nextElementSibling);
         }
-        return message.join('\n');
     }
 }
