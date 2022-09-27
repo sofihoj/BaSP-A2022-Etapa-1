@@ -1,49 +1,34 @@
 window.onload = function() {
+    var inputs = document.getElementsByTagName('input');
+
     /* EMAIL VALIDATION */
-    var formEmail = document.getElementById('formEmail');
+    var formEmail = inputs[0];
     var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
-    var emailInput = document.getElementById('emailInput');
-    var p = document.createElement('p');
+    var emailP = document.createElement('p');
 
     formEmail.onblur = function() {
         if (formEmail.value === '') {
             formEmail.classList.add('red-border');
-            p.innerHTML = 'Email is required'
-            emailInput.appendChild(p);
+            emailP.innerHTML = 'Email is required'
+            formEmail.parentElement.insertBefore(emailP, formEmail.nextElementSibling)
         } else if (!emailExpression.test(formEmail.value)) {
             formEmail.classList.add('red-border');
-            p.innerHTML = 'Correct format should be email@domain.com';
-            emailInput.appendChild(p);
+            emailP.innerHTML = 'Correct format should be email@domain.com';
+            formEmail.parentElement.insertBefore(emailP, formEmail.nextElementSibling)
         } else {
             formEmail.classList.add('green-border');
         }
     }
 
     formEmail.onfocus = function () {
-        formEmail.classList.remove('red-border');
-        emailInput.removeChild(p);
+        removeP(formEmail);
     }
 
     /* PASSWORD VALIDATION */
-    var formPassword = document.getElementById('formPassword');
-    var passwordInput = document.getElementById('passwordInput');
+    var formPassword = inputs[1];
+    var passwordP = document.createElement('p');
 
     formPassword.onblur = function() {
-        // var numbers = false;
-        // var letters = false;
-        // var specialCaracters = true;
-        // for (var i = 0; i < formPassword.value.length; i++){
-        //     var element = formPassword.value;
-        //     var charCode = element.charCodeAt(i)
-        //     parseElement = parseInt(element)
-        //     if (isNaN(parseElement)) {
-        //         letters = true;
-        //     } else if (!isNaN(parseElement)) {
-        //         numbers = true;
-        //     } else if (charCode > 32 && charCode < 48) {
-        //         specialCaracters = false;
-        //     }
-
         var numbers = "0123456789";
         var validationNumber = false
 
@@ -64,31 +49,61 @@ window.onload = function() {
 
         if (formPassword.value === '') {
             formPassword.classList.add('red-border');
-            p.innerHTML = 'Password is required';
-            passwordInput.appendChild(p);
-        // } else if (formPassword.value.length < 8 || numbers !=true || letters !=true) {
+            passwordP.innerHTML = 'Password is required';
+            formPassword.parentElement.insertBefore(passwordP, formPassword.nextElementSibling)
         } else if (formPassword.value.length < 8 || validationNumber != true || validationLetters != true) {
             formPassword.classList.add('red-border');
-            p.innerHTML = 'Password must have at least 8 characters of letters and numbers';
-            passwordInput.appendChild(p);
+            passwordP.innerHTML = 'Password must have at least 8 characters of letters and numbers';
+            formPassword.parentElement.insertBefore(passwordP, formPassword.nextElementSibling)
         } else {
             formPassword.classList.add('green-border');
         }
     }
 
     formPassword.onfocus = function () {
-        formPassword.classList.remove('red-border');
-        passwordInput.removeChild(p);
+        removeP(formPassword);
     }
 
     /* BUTTON */
     var button = document.getElementById('btn-login');
 
-    button.onclick = function(){
-        if (formEmail.classList.contains('green-border') && formPassword.classList.contains('green-border')){
-            alert('Mail: ' + formEmail.value + '\nPassword: ' + formPassword.value);
+    button.onclick = function(e){
+        e.preventDefault();
+        var completed = 0;
+        var errors = [];
+        var message = '';
+        for (var i = 0; i < inputs.length; i++) {
+            if (inputs[i].classList.contains('green-border')) {
+                completed++;
+            } else if (inputs[i].classList.contains('red-border')) {
+                errors.push(inputs[i].nextElementSibling);
+            }
+        }
+        if (completed == inputs.length) {
+            message = 'Sign up successful!\n';
+            for (var i = 0; i < inputs.length; i++) {
+                message += inputs[i].name + ': ' + inputs[i].value + '\n';
+            }
+
+        } else if (errors.length == 0) {
+            message = 'All fields are required.';
         } else {
-            alert('Some imputs are wrong')
+            message = 'Something went wrong\n';
+            if (errors.length + completed !== inputs.length) {
+                message += 'Complete all fields\n'
+            }
+            for (var i = 0; i < errors.length; i++) {
+                message += errors[i].innerHTML + '\n';
+            }
+        }
+        alert(message);
+    }
+
+    /* FUNCTIONS */
+    function removeP(input) {
+        input.classList.remove('red-border');
+        if (input.nextElementSibling) {
+            input.parentElement.removeChild(input.nextElementSibling);
         }
     }
 }
