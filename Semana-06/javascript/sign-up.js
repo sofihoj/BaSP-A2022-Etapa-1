@@ -188,7 +188,7 @@ window.onload = function(){
             formAdress.parentElement.insertBefore(adressP, formAdress.nextElementSibling)
         } else if (!hasLetters((formAdress.value).substring(0, blankSpace)) || !hasNumbers((formAdress.value).substring(blankSpace+1, (formAdress.value).length))){
             formAdress.classList.add('red-border')
-            adressP.innerHTML = ('Wrong adress format')
+            adressP.innerHTML = ('Adress format should be "Street number"')
             formAdress.parentElement.insertBefore(adressP, formAdress.nextElementSibling)
         } else {
             formAdress.classList.add('green-border')

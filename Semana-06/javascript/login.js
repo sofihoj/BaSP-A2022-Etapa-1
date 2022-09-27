@@ -80,7 +80,7 @@ window.onload = function() {
             }
         }
         if (completed == inputs.length) {
-            message = 'Sign up successful!\n';
+            message = 'Login successful!\n';
             for (var i = 0; i < inputs.length; i++) {
                 message += inputs[i].name + ': ' + inputs[i].value + '\n';
             }
