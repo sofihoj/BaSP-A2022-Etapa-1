@@ -4,10 +4,36 @@ main {
     align-items: center;
 }
 
+main a {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 form {
     display: flex;
     flex-direction: column;
     width: inherit;
+}
+
+form label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+form input {
+    margin: 10px 0 20px 0;
+    height: 30px;
+    border: 1px solid #373867;
+    border-radius: 4px;
+    width: 100%;
+}
+
+form p {
+    color: #ff0000;
+    font-size: 12px;
+    align-self: flex-end;
+    margin-top: -8px;
+    margin-bottom: 0;
 }
 
 footer {
@@ -41,23 +67,15 @@ footer {
     margin-top: 0;
 }
 
+.form-container > p {
+    font-size: 14px;
+    margin-top: 20px;
+}
+
 .form-inputs {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-form input {
-    margin: 10px 0 20px 0;
-    height: 30px;
-    border: 1px solid #373867;
-    border-radius: 4px;
-    width: 100%;
-}
-
-form label {
-    font-weight: bold;
-    font-size: 14px;
 }
 
 .form-input {
@@ -80,14 +98,6 @@ form label {
 #btn-signup:hover {
     background-color: #F13312;
     color: #373867;
-}
-
-form p {
-    color: #ff0000;
-    font-size: 12px;
-    align-self: flex-end;
-    margin-top: -8px;
-    margin-bottom: 0;
 }
 
 .green-border {
@@ -123,9 +133,4 @@ form p {
         width: 85%;
         margin: 0 20px;
     }
-
-    /* #email {
-        width: 97%;
-        margin: 15px 0px 15px 0;
-    } */
 }
