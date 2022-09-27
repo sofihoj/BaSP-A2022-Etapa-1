@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="../styles/main.css">
         <link rel="stylesheet" href="../styles/sidebar.css">
         <link rel="stylesheet" href="../styles/footer.css">
+        <script src="../javascript/contact.js"></script>
         <title>Trackgenix</title>
     </head>
     <body>
@@ -167,12 +168,12 @@
                             <div class="form-div">
                                 <div class="form-inputs">
                                     <div class="form-input">
-                                        <label for="full-name">Full name:</label>
-                                        <input type="text" name="full-name" placeholder="Full name">
+                                        <label for="full-name">Name:</label>
+                                        <input type="text" name="Name" id="indexName" placeholder="Full name">
                                     </div>
                                     <div class="form-input">
                                         <label for="email">Email:</label>
-                                        <input type="email" name="email" placeholder="Email">
+                                        <input type="text" name="Email" id="indexEmail" placeholder="Email">
                                     </div>
                                 </div>
                                 <div class="radio-buttons">
@@ -193,10 +194,10 @@
                             </div>
                             <div class="message">
                                 <p>Message:</p>
-                                <textarea name="message" rows="10" cols="50" placeholder="Message"></textarea>
+                                <textarea name="Message" rows="10" cols="50" id="indexMessage" placeholder="Message"></textarea>
                             </div>
                             <div>
-                                <button id="reset">Reset</button>
+                                <button id="reset" type="reset">Reset</button>
                                 <button id="send">Send</button>
                             </div>
                         </form>
