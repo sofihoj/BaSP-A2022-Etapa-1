@@ -1,0 +1,24 @@
+footer {
+    text-align: center;
+    padding-top: 20px;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 25px;
+}
+
+footer li {
+    padding: 0 2px;
+}
+
+footer i, .top-header a {
+    color: #5D5D5D;
+}
+
+footer p {
+    margin: 15px;
+    font-size: 14px;
+}
