@@ -54,6 +54,16 @@ Also, using JavaScript add validations for the inputs.<br>
 - Take a look on the code [here](https://github.com/sofihoj/BaSP-A2022-Etapa-1/tree/master/Semana-06)
 - Github pages: [Semana-06](https://sofihoj.github.io/BaSP-A2022-Etapa-1/Semana-06/views/index.html)
 
+### **Week 07: HTTP REQUESTS**
+This week's task consists of extending the functionality of the login and signup forms making the information loaded in each one of them to be sent 
+to a web server using the JavaScript fetch method.<br>
+Depending on the result of that HTTP request, each form will display a different message.<br>
+The information of the signup form will be saved in LocalStorage to be used in the same form when loading the page if all the inputs are in the correct format.<br>
+- Languages / tools used:
+<br>[![My Skills](https://skills.thijs.gg/icons?i=html,css,js)](https://skills.thijs.gg)
+- Take a look on the code [here](https://github.com/sofihoj/BaSP-A2022-Etapa-1/tree/master/Semana-07)
+- Github pages: [Semana-07](https://sofihoj.github.io/BaSP-A2022-Etapa-1/Semana-07/views/index.html)
+
 <hr />
 
 _By Sofía Hojberg_
