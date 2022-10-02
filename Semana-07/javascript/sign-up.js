@@ -389,36 +389,69 @@ window.onload = function(){
 
     button.onclick = function (e) {
         e.preventDefault();
-        var completed = 0;
-        var errors = [];
-        var message = '';
-        for (var i = 0; i < inputs.length; i++) {
-            if (inputs[i].classList.contains('green-border')) {
-                completed++;
-            } else if (inputs[i].classList.contains('red-border')) {
-                errors.push(inputs[i].nextElementSibling);
-            }
-        }
-        if (completed == inputs.length) {
-            message = 'Sign up successful!\n';
-            for (var i = 0; i < inputs.length; i++) {
-                message += inputs[i].name + ': ' + inputs[i].value + '\n';
-            }
+        var birthday = formBirthday.value;
+        var dateSplit = birthday.split('-');
+        birthday = dateSplit[1] + '/'+dateSplit[2]+ '/' + dateSplit[0];
 
-        } else if (errors.length == 0) {
-            message = 'All fields are required.';
-        } else {
-            message = 'Something went wrong\n';
-            if (errors.length + completed !== inputs.length) {
-                message += 'Complete all fields\n'
-            }
-            for (var i = 0; i < errors.length; i++) {
-                message += errors[i].innerHTML + '\n';
-            }
-        }
-        alert(message);
+        var name = formName.value;
+        var lastName = formLastName.value;
+        var id = formId.value;
+        var phone = formPhone.value;
+        var address = formAdress.value;
+        var city = formCity.value;
+        var zipCode = formZipCode.value
+        var email = formEmail.value;
+        var password = formPassword.value;
+
+        var queryParams = 'name=' + name + '&lastName=' + lastName + '&dni=' + id + '&dob=' + birthday + '&phone=' + phone
+        + '&address=' + address + '&city=' + city + '&zip=' + zipCode + '&email=' + email + '&password=' + password;
+        var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?' + queryParams;
+
+        fetch(url)
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(data){
+                if(data.success){
+                    localStorage.setItem('name', name);
+                    localStorage.setItem('lastName', lastName);
+                    localStorage.setItem('id', id);
+                    localStorage.setItem('birthday', birthday);
+                    localStorage.setItem('phone', phone);
+                    localStorage.setItem('address', address);
+                    localStorage.setItem('city', city);
+                    localStorage.setItem('zipCode', zipCode);
+                    localStorage.setItem('email', email);
+                    localStorage.setItem('password', password);
+                    alert('Login successful! ' + data.msg);
+                } else if (data.errors){
+                    var messages = ''
+                    for (var error of data.errors) {
+                        messages += error.msg + '\n'
+                    }
+                    alert(messages);
+                } else {
+                    alert(data.msg);
+                }
+            })
+            .catch(function(error) {
+                alert('Error:\n' + error);
+            })
     }
 
+    if (localStorage.getItem("name") != null) { 
+        formName.value = localStorage.getItem('name');
+        formLastName.value = localStorage.getItem('lastName');
+        formId.value = localStorage.getItem('id');
+        formBirthday.value = convertDate(localStorage.getItem('birthday'));
+        formPhone.value = localStorage.getItem('phone');
+        formAdress.value = localStorage.getItem('address');
+        formCity.value = localStorage.getItem('city');
+        formZipCode.value = localStorage.getItem('zipCode');
+        formEmail.value = localStorage.getItem('email');
+        formPassword.value = localStorage.getItem('password');
+        formPassword2.value = localStorage.getItem('password');
+    };
 
     /* FUNCTIONS */
     function hasLetters(input) {
@@ -449,4 +482,11 @@ window.onload = function(){
             input.parentElement.removeChild(input.nextElementSibling);
         }
     }
+
+    function convertDate(date){
+        [month, day, year] = date.split('/');
+        var dateFormat = [year, month, day].join('-')
+
+        return dateFormat
+      }
 }
