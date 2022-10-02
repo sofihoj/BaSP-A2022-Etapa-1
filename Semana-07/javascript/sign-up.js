@@ -429,13 +429,13 @@ window.onload = function(){
                     for (var error of data.errors) {
                         messages += error.msg + '\n'
                     }
-                    alert(messages);
+                    throw new Error(messages);
                 } else {
                     alert(data.msg);
                 }
             })
             .catch(function(error) {
-                alert('Error:\n' + error);
+                alert(error);
             })
     }
 
