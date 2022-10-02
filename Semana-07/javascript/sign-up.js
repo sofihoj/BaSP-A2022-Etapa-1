@@ -1,6 +1,5 @@
 window.onload = function(){
     var inputs = document.getElementsByTagName('input');
-    var inputsP = document.getElementsByClassName('form-input');
 
     /* NAME VALIDATION */
     var formName = inputs[0];
