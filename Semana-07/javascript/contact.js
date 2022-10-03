@@ -1,6 +1,9 @@
 window.onload = function () {
-    /* NAME VALIDATION */
     var formName = document.getElementById('indexName');
+    var formEmail = document.getElementById('indexEmail');
+    var formMessage = document.getElementById('indexMessage');
+    var inputs = [formName, formEmail, formMessage]
+    /* NAME VALIDATION */
     var nameP = document.createElement('p');
 
     formName.onblur = function() {
@@ -38,7 +41,6 @@ window.onload = function () {
     }
 
     /* EMAIL VALIDATION */
-    var formEmail = document.getElementById('indexEmail');
     var emailP = document.createElement('p');
     var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
 
@@ -61,7 +63,6 @@ window.onload = function () {
     }
 
     /* MESSAGE VALIDATION */
-    var formMessage = document.getElementById('indexMessage');
     var messageP = document.createElement('p');
 
     formMessage.onblur = function() {
@@ -106,7 +107,6 @@ window.onload = function () {
     buttonSend.onclick = function (e) {
         e.preventDefault();
         var completed = 0;
-        var inputs = [formName, formEmail, formMessage]
         var errors = [];
         var message = '';
         for (var i = 0; i < inputs.length; i++) {
