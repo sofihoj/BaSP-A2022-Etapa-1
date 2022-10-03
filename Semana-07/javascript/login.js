@@ -71,28 +71,29 @@ window.onload = function() {
         e.preventDefault();
         var email = formEmail.value;
         var password = formPassword.value;
-        var url = 'https://basp-m2022-api-rest-server.herokuapp.com/login?email=' + email + '&password=' + password;
+        var queryParams = 'email=' + email + '&password=' + password;
+        var url = 'https://basp-m2022-api-rest-server.herokuapp.com/login?' + queryParams;
 
         fetch(url)
-        .then(function(response){
-            return response.json();
-        })
-        .then(function(data){
-            if(data.success){
-                alert('Login successful! ' + data.msg);
-            } else if (data.errors){
-                var messages = ''
-                for (var error of data.errors) {
-                    messages += error.msg + '\n'
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(data){
+                if(data.success){
+                    alert('Login successful! ' + data.msg + '\nEmail: ' + email + '\nPassword: ' + password) ;
+                } else if (data.errors){
+                    var messages = ''
+                    for (var error of data.errors) {
+                        messages += error.msg + '\n'
+                    }
+                    throw new Error(messages);
+                } else {
+                    alert(data.msg);
                 }
-                throw new Error(messages);
-            } else {
-                alert(data.msg);
-            }
-        })
-        .catch(function(error) {
-            alert(error);
-        })
+            })
+            .catch(function(error) {
+                alert(error);
+            })
     }
 
     /* FUNCTIONS */

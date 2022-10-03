@@ -423,7 +423,9 @@ window.onload = function(){
                     localStorage.setItem('zipCode', zipCode);
                     localStorage.setItem('email', email);
                     localStorage.setItem('password', password);
-                    alert('Login successful! ' + data.msg);
+                    alert('Signup successful! ' + data.msg + '\nName: ' + name + '\nLast name: ' + lastName + '\nDNI: ' + id
+                    + '\nBirthday: ' + birthday + '\nPhone number: ' + phone + '\nAddress: ' + address + '\nCity: ' + city
+                    + '\nZip Code: ' + zipCode + '\nEmail: ' + email + '\nPassword: ' + password);
                 } else if (data.errors){
                     var messages = ''
                     for (var error of data.errors) {
