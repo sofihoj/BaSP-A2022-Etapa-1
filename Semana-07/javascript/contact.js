@@ -5,6 +5,7 @@ window.onload = function () {
     var inputs = [formName, formEmail, formMessage]
     /* NAME VALIDATION */
     var nameP = document.createElement('p');
+    var validateName;
 
     formName.onblur = function() {
         var letters;
@@ -33,6 +34,7 @@ window.onload = function () {
             formName.parentElement.insertBefore(nameP, formName.nextElementSibling)
         } else {
             formName.classList.add('green-border')
+            validateName = true;
         }
     }
 
@@ -43,6 +45,7 @@ window.onload = function () {
     /* EMAIL VALIDATION */
     var emailP = document.createElement('p');
     var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
+    var validateEmail;
 
     formEmail.onblur = function() {
         if (formEmail.value === '') {
@@ -55,6 +58,7 @@ window.onload = function () {
             formEmail.parentElement.insertBefore(emailP, formEmail.nextElementSibling)
         } else {
             formEmail.classList.add('green-border');
+            validateEmail = true;
         }
     }
 
@@ -64,6 +68,7 @@ window.onload = function () {
 
     /* MESSAGE VALIDATION */
     var messageP = document.createElement('p');
+    var validateMessage;
 
     formMessage.onblur = function() {
         var numbers = "0123456789";
@@ -94,6 +99,7 @@ window.onload = function () {
             formMessage.parentElement.insertBefore(messageP, formMessage.nextElementSibling)
         } else {
             formMessage.classList.add('green-border');
+            validateMessage = true;
         }
     }
 
@@ -106,39 +112,30 @@ window.onload = function () {
 
     buttonSend.onclick = function (e) {
         e.preventDefault();
-        var completed = 0;
-        var errors = [];
         var message = '';
-        for (var i = 0; i < inputs.length; i++) {
-            if (inputs[i].classList.contains('green-border')) {
-                completed++;
-            } else if (inputs[i].classList.contains('red-border')) {
-                errors.push(inputs[i].nextElementSibling);
-            }
-        }
-        if (completed == inputs.length) {
-            message = 'Message sent!\n';
-            for (var i = 0; i < inputs.length; i++) {
-                message += inputs[i].name + ': ' + inputs[i].value + '\n';
-            }
 
-        } else if (errors.length == 0) {
+        if (formName.value == '' || formEmail.value == '' || formMessage.value == ''){
             message = 'All fields are required.';
         } else {
-            message = 'Something went wrong\n';
-            if (errors.length + completed !== inputs.length) {
-                message += 'Complete all fields\n'
+            if (formEmail.parentElement.contains(emailP)) {
+                message += 'Email error\n';
+                message += emailP.innerHTML + '\n';
             }
-            for (var i = 0; i < errors.length; i++) {
-                message += errors[i].innerHTML + '\n';
+            if (formName.parentElement.contains(nameP)) {
+                message += 'Name error\n';
+                message += nameP.innerHTML;
             }
+            if (formMessage.parentElement.contains(messageP)) {
+                message += 'Message error\n';
+                message += messageP.innerHTML;
+            }
+        }
+        if (message == '') {
+            message = 'Message sent!\n' +
+            formName.value + '\n' + formEmail.value + '\n' + formMessage.value;
         }
         alert(message);
     }
-
-    // var buttonReset = document.getElementById('send');
-
-
 
     /* FUNCTIONS */
     function removeP(input) {
